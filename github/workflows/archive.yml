@@ -15,7 +15,7 @@ jobs:
 
     - name: Run Archiving Script
       run: |
-        chmod +x archiving_script.sh
+        chmod +x archivingg_script.sh
         ./archiving_script.sh  # Replace with the actual script name
 
     - name: Upload Log to Artifacts
