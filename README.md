@@ -123,3 +123,50 @@ jobs:
 In this example, replace placeholders like `archiving_script.sh`, `archive_log_*.log`, and others with actual values corresponding to your setup.
 
 Make sure to thoroughly test your workflow and archiving script to ensure they work as expected. Also, consider setting up additional steps, such as sending notifications on completion or handling potential failures.
+
+
+#Problem 3
+
+Creating a complete and effective Bash script for configuring an HPC cluster's power-saving measures using SLURM involves multiple complex steps that require thorough understanding of both SLURM and the cluster's hardware. However, I can provide you with a simplified example of a Bash script that demonstrates the concept of adjusting SLURM settings for power savings during low utilization periods.
+
+Please note that this script is a starting point and may need to be customized according to your cluster's setup, SLURM configuration, and specific power-saving strategies.
+
+```bash
+#!/bin/bash
+
+# Set SLURM configurations for power savings during low utilization
+
+# Idle node detection and standby mode
+IDLE_THRESHOLD=10  # Example: Set a utilization threshold for idle nodes (percentage)
+STANDBY_POWER_STATE="standby"  # Example: Power-saving state when nodes are idle
+
+# Energy-efficient queue settings
+EFFICIENT_QUEUE="energy_efficient"  # Example: Queue name for energy-efficient jobs
+EFFICIENT_PRIORITY=100  # Example: Priority for the energy-efficient queue
+
+# Dynamic rescheduling during moderate utilization
+CONSOLIDATION_SCRIPT="/path/to/consolidation_script.sh"  # Example: Path to the consolidation script
+
+# Predictive scheduling settings
+PREDICTIVE_SCRIPT="/path/to/predictive_script.sh"  # Example: Path to the predictive script
+
+# Set SLURM configurations
+scontrol update NodeName=ALL State=${STANDBY_POWER_STATE}
+scontrol create PartitionName=$EFFICIENT_QUEUE Priority=$EFFICIENT_PRIORITY
+
+# Run dynamic rescheduling script during moderate utilization
+if [ -f "$CONSOLIDATION_SCRIPT" ]; then
+    $CONSOLIDATION_SCRIPT
+fi
+
+# Run predictive scheduling script
+if [ -f "$PREDICTIVE_SCRIPT" ]; then
+    $PREDICTIVE_SCRIPT
+fi
+
+echo "SLURM power-saving configurations updated."
+```
+
+Please replace placeholders (`/path/to/...`) with actual paths to your scripts and adjust the settings based on your cluster's configuration. The provided script demonstrates some basic concepts, including updating node states, creating an energy-efficient queue, and running custom scripts for dynamic rescheduling and predictive scheduling.
+
+It's important to note that real-world implementation requires a more comprehensive approach, possibly involving database integration, real-time monitoring, and more sophisticated power-saving strategies. Additionally, these scripts need to be developed and tested carefully in a controlled environment before applying them to a production cluster.
