@@ -171,3 +171,18 @@ echo "SLURM power-saving configurations updated."
 Please replace placeholders (`/path/to/...`) with actual paths to your scripts and adjust the settings based on your cluster's configuration. The provided script demonstrates some basic concepts, including updating node states, creating an energy-efficient queue, and running custom scripts for dynamic rescheduling and predictive scheduling.
 
 It's important to note that real-world implementation requires a more comprehensive approach, possibly involving database integration, real-time monitoring, and more sophisticated power-saving strategies. Additionally, these scripts need to be developed and tested carefully in a controlled environment before applying them to a production cluster.
+
+
+# PAID SOLUTIONS
+
+WORKLOAD-AWARE POWER MANAGEMENT
+Moab® HPC Suite’s workload awareness enables it to provide a unique and innovative solution to power management. It is estimated that over the life of an HPC system, accrued energy costs are equivalent to the cost of the hardware itself. With HPC systems expanding rapidly, energy control is increasingly necessary to reducing costs, meeting power targets, and minimizing carbon footprint. Through idle system power reclamation and per-application power optimization, Moab offers the tools necessary for organizations to identify, create, and implement the optimal power savings solutions to meet their power management objectives.
+
+IDLE SYSTEM POWER RECLAMATION
+Through Moab’s Intelligent Power Management, HPC users can lower the power state of idle nodes in order to reclaim unnecessary energy usage. HPC systems inevitably experience some measure of node idleness, for example, at the start and end of the life of a cluster, during evenings, weekends, and holidays, or any other time when job submissions slow down or halt. Moab® identifies nodes that are not currently executing workloads and takes them offline by lowering their power state to either standby, suspend, hibernate, or off. This will result in significant reductions in excess power usage, especially with large systems.
+
+To maintain fast response times, Moab® utilizes a Green Pool Buffer Policy which helps to mitigate the delay inherent in restarting these offline nodes. The Green Pool is a small number of nodes permitted to remain in an idle state, thereby ensuring that there are always online nodes readily available for new jobs. The Green Pool then powers down or powers up nodes to maintain quick access to idle nodes, but leverages Moab’s predictive power to ensure that the system is always prepared to perform optimally, while still saving energy appropriately.
+
+Eliminate excess power consumption
+Decrease carbon footprint
+Maintain system responsiveness
