@@ -1,0 +1,26 @@
+name: Archive Data
+
+on:
+  push:
+    branches:
+      - main  # Change this to the desired branch
+
+jobs:
+  archive:
+    runs-on: self-hosted  # Replace with the label of your self-hosted runner
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Run Archiving Script
+      run: |
+        chmod +x archiving_script.sh
+        ./archiving_script.sh  # Replace with the actual script name
+
+    - name: Upload Log to Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: archive-log
+        path: archive_log_*.log  # Replace with the actual log file name
+
