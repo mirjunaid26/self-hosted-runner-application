@@ -1,3 +1,4 @@
+# Problem 2
 Given the complexity of archiving large microscope datasets and your specific requirements, here's a suggested strategy and an outline of a Bash script to prepare and archive the data to tape. This approach focuses on creating an organized, versioned, and efficient archiving process:
 
 **Strategy: Efficient and Versioned Archiving**
@@ -125,7 +126,7 @@ In this example, replace placeholders like `archiving_script.sh`, `archive_log_*
 Make sure to thoroughly test your workflow and archiving script to ensure they work as expected. Also, consider setting up additional steps, such as sending notifications on completion or handling potential failures.
 
 
-#Problem 3
+# Problem 3
 
 Creating a complete and effective Bash script for configuring an HPC cluster's power-saving measures using SLURM involves multiple complex steps that require thorough understanding of both SLURM and the cluster's hardware. However, I can provide you with a simplified example of a Bash script that demonstrates the concept of adjusting SLURM settings for power savings during low utilization periods.
 
