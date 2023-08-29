@@ -272,3 +272,10 @@ To maintain fast response times, Moab® utilizes a Green Pool Buffer Policy whic
 Eliminate excess power consumption
 Decrease carbon footprint
 Maintain system responsiveness
+
+# OPEN RESERACH PROBLEM 
+
+
+Toward Building a Digital Twin of Job Scheduling and Power Management on an HPC System by Ohmura et al. 2023
+
+Abstract: The purpose of this work is to reduce the burden on system administrators by virtually reproducing job scheduling and power management of their target systems and thereby helping them properly configure the system parameters and policies. Specifically, this paper focuses on a real computing system, named Supercomputer AOBA, as an example to discuss the importance of accurately reproducing the behaviors of job scheduling in the simulation. Since AOBA uses some special power saving features that are not supported by any existing job scheduling simulators, we have first implemented a component for a job scheduling simulator to support the special features, and thus to build a“Digital Twin" of AOBA’s job scheduler. By using the Digital Twin with actual operation data, a system administrator can check if the system is efficiently used in terms of computational performance and power efficiency. This paper shows a use case of exploring appropriate scheduling and power saving parameters. In the use case, we found that there are more appropriate parameter configurations, which can reduce the job waiting time by 70% at most and the energy consumption by 1.2% at most when the system is busy. By exploiting such a Digital Twin, therefore, it is demonstrated the feasibility that a system administrator can properly adjust various parameters without disturbing the system operation.
