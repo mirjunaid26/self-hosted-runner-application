@@ -172,6 +172,92 @@ Please replace placeholders (`/path/to/...`) with actual paths to your scripts a
 
 It's important to note that real-world implementation requires a more comprehensive approach, possibly involving database integration, real-time monitoring, and more sophisticated power-saving strategies. Additionally, these scripts need to be developed and tested carefully in a controlled environment before applying them to a production cluster.
 
+# SOLUTIONs
+
+Adaptive power management in HPC clusters involves using various tools and techniques to optimize power consumption while maintaining performance. Here are some tools commonly used for adaptive power management in HPC clusters:
+
+1. **SLURM (Simple Linux Utility for Resource Management):**
+   SLURM is a widely used job scheduler and resource manager in HPC clusters. It offers features that can be leveraged for power management, such as managing power states of nodes, energy-efficient job scheduling, and prioritizing energy-efficient queues during low utilization periods.
+
+2. **PowerTOP:**
+   PowerTOP is a Linux utility that provides real-time power usage information for processes and devices. It helps identify power-hungry applications and processes, allowing administrators to make informed decisions about resource allocation and power management.
+
+3. **Intel Node Manager (NM) and Dynamic Power Node Manager (DPNM):**
+   Intel NM and DPNM are tools that allow administrators to monitor and control the power consumption of Intel-based servers. They provide features for managing power caps, monitoring thermal conditions, and optimizing power efficiency.
+
+4. **IBM PowerAI:**
+   IBM PowerAI offers a suite of tools and technologies for optimizing AI and HPC workloads on IBM Power Systems. It includes power management capabilities that dynamically adjust power usage based on workload requirements.
+
+5. **HPC Power Management Libraries:**
+   Some HPC vendors offer power management libraries and APIs that enable fine-grained control over power usage, allowing administrators to adjust frequencies, voltages, and power states of hardware components.
+
+6. **Ganglia:**
+   Ganglia is a scalable distributed monitoring system that provides real-time views of cluster performance and resource usage. It can help identify underutilized nodes and aid in making decisions for power management.
+
+7. **Advanced Configuration and Power Interface (ACPI):**
+   ACPI is a standard for managing power and configuration of hardware devices. It's built into most modern systems and can be used to control power states and optimize energy consumption.
+
+8. **Adaptive Voltage and Frequency Scaling (AVFS) Tools:**
+   Some processors support AVFS, which dynamically adjusts voltage and frequency levels based on workload demands. Tools exist to control AVFS and take advantage of energy-efficient scaling.
+
+9. **Energy Management Tools from Hardware Vendors:**
+   Many hardware vendors provide their own energy management tools designed to work with their specific hardware, allowing administrators to configure and optimize power usage.
+
+10. **Custom Scripts and Automation:**
+    Administrators often create custom scripts and automation to monitor resource usage, job scheduling, and power consumption, and then make adjustments based on predefined policies.
+
+It's important to note that the specific tools used will depend on the hardware and software environment of your HPC cluster. Additionally, tools may need to be integrated and customized to fit the cluster's unique characteristics and requirements.
+
+
+Custom scripts for adaptive power management in HPC clusters can be designed to automate various tasks that optimize power consumption based on the cluster's utilization and workload patterns. Here are some examples of custom scripts you could develop:
+
+1. **Dynamic Node Scaling Script:**
+   - Monitor cluster utilization using SLURM job queue data or monitoring tools.
+   - Automatically adjust the number of active nodes based on the current workload.
+   - Use SLURM commands to scale down nodes during low utilization periods and scale up during high utilization.
+
+2. **Energy-Efficient Job Scheduling Script:**
+   - Analyze job queue data to identify energy-efficient job scheduling opportunities.
+   - Prioritize or queue low-priority jobs during off-peak hours to consolidate tasks and reduce the number of active nodes.
+
+3. **Predictive Scheduling Script:**
+   - Analyze historical job scheduling patterns to predict upcoming low-usage periods.
+   - Automatically adjust the power modes of nodes or schedule jobs accordingly.
+
+4. **Thermal Management Script:**
+   - Monitor the temperature of nodes using hardware sensors.
+   - Dynamically adjust node power states to prevent overheating while minimizing performance impact.
+
+5. **Resource Consolidation Script:**
+   - Identify nodes with low utilization and consolidate active jobs onto fewer nodes.
+   - Power down underutilized nodes to save energy.
+
+6. **Job Checkpointing and Suspension Script:**
+   - Automatically checkpoint long-running jobs and suspend them during low-usage periods.
+   - Resume jobs when higher utilization is expected.
+
+7. **Adaptive Frequency Scaling Script:**
+   - Monitor CPU load and workload intensity.
+   - Dynamically adjust CPU frequencies to match workload demands, optimizing performance-per-watt.
+
+8. **Energy Reporting and Logging Script:**
+   - Collect and log energy consumption data for individual nodes or the entire cluster.
+   - Generate reports and analytics to track energy-saving improvements over time.
+
+9. **User Notification Script:**
+   - Notify users about scheduled power-saving periods and provide options for scheduling energy-efficient jobs.
+
+10. **Hybrid Energy and Performance Optimization Script:**
+    - Develop a script that optimizes a trade-off between performance and energy savings based on user-defined policies.
+
+11. **Cluster Cooling Optimization Script:**
+    - Integrate with cooling management systems to adjust cooling resources based on workload and temperature conditions.
+
+12. **Emergency Power Management Script:**
+    - Detect power grid stress or supply issues and automatically initiate power-saving measures to prevent overload or system failures.
+
+When creating custom scripts, ensure that they are thoroughly tested in a controlled environment before deploying them to a production cluster. Also, consider implementing error handling, logging, and security measures to ensure the scripts function reliably and securely. Custom scripts should be periodically reviewed and updated to adapt to changing cluster requirements and technologies.
+
 
 # PAID SOLUTIONS
 
