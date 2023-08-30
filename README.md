@@ -127,8 +127,8 @@ In this example, replace placeholders like `archiving_script.sh`, `archive_log_*
 
 ## Problem 3
 
-SLURM Power Saving Tools
-### slurm.conf file
+### SLURM Power Saving Tools
+#### slurm.conf file
 ```
 #!/bin/bash
 # Excerpt of slurm.conf
@@ -168,10 +168,7 @@ do
    sudo node_startup $host
 done
 ```
-
-Creating a complete and effective Bash script for configuring an HPC cluster's power-saving measures using SLURM involves multiple complex steps that require thorough understanding of both SLURM and the cluster's hardware. However, I can provide you with a simplified example of a Bash script that demonstrates the concept of adjusting SLURM settings for power savings during low utilization periods.
-
-Please note that this script is a starting point and may need to be customized according to your cluster's setup, SLURM configuration, and specific power-saving strategies.
+Bash script that demonstrates the concept of adjusting SLURM settings for power savings during low utilization periods. This is a starting point and may need to be customized according to your cluster's setup, SLURM configuration, and specific power-saving strategies.
 
 ```bash
 #!/bin/bash
@@ -211,7 +208,6 @@ echo "SLURM power-saving configurations updated."
 
 Please replace placeholders (`/path/to/...`) with actual paths to your scripts and adjust the settings based on your cluster's configuration. The provided script demonstrates some basic concepts, including updating node states, creating an energy-efficient queue, and running custom scripts for dynamic rescheduling and predictive scheduling.
 
-It's important to note that real-world implementation requires a more comprehensive approach, possibly involving database integration, real-time monitoring, and more sophisticated power-saving strategies. Additionally, these scripts need to be developed and tested carefully in a controlled environment before applying them to a production cluster.
 
 ## SOLUTIONs
 
@@ -247,10 +243,10 @@ Adaptive power management in HPC clusters involves using various tools and techn
 10. **Custom Scripts and Automation:**
     Administrators often create custom scripts and automation to monitor resource usage, job scheduling, and power consumption, and then make adjustments based on predefined policies.
 
-It's important to note that the specific tools used will depend on the hardware and software environment of your HPC cluster. Additionally, tools may need to be integrated and customized to fit the cluster's unique characteristics and requirements.
 
 
-Custom scripts for adaptive power management in HPC clusters can be designed to automate various tasks that optimize power consumption based on the cluster's utilization and workload patterns. Here are some examples of custom scripts you could develop:
+
+### OTHER SOLUTIONS
 
 1. **Dynamic Node Scaling Script:**
    - Monitor cluster utilization using SLURM job queue data or monitoring tools.
@@ -297,7 +293,6 @@ Custom scripts for adaptive power management in HPC clusters can be designed to 
 12. **Emergency Power Management Script:**
     - Detect power grid stress or supply issues and automatically initiate power-saving measures to prevent overload or system failures.
 
-When creating custom scripts, ensure that they are thoroughly tested in a controlled environment before deploying them to a production cluster. Also, consider implementing error handling, logging, and security measures to ensure the scripts function reliably and securely. Custom scripts should be periodically reviewed and updated to adapt to changing cluster requirements and technologies.
 
 
 ## PAID SOLUTIONS
