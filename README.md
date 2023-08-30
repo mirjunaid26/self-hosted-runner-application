@@ -1,6 +1,6 @@
-### HPC Engineers Toolkit
+# HPC Engineers Toolkit
 
-# Problem 2
+## Problem 2
 
 **Strategy: Efficient and Versioned Archiving**
 
@@ -125,10 +125,10 @@ jobs:
 In this example, replace placeholders like `archiving_script.sh`, `archive_log_*.log`, and others with actual values corresponding to your setup.
 
 
-# Problem 3
+## Problem 3
 
 SLURM Power Saving Tools
-# slurm.conf file
+### slurm.conf file
 ```
 #!/bin/bash
 # Excerpt of slurm.conf
@@ -148,7 +148,7 @@ PartitionName=debug MaxTime=1:00:00 Nodes=tux[0-32] Default=yes
 PartitionName=batch MaxTime=8:00:00 Nodes=tux[0-127],ec[0-127] Default=no
 ```
 
-# SuspendProgram and ResumeProgram
+### SuspendProgram and ResumeProgram
 ```
 #!/bin/bash
 # Example SuspendProgram
@@ -213,7 +213,7 @@ Please replace placeholders (`/path/to/...`) with actual paths to your scripts a
 
 It's important to note that real-world implementation requires a more comprehensive approach, possibly involving database integration, real-time monitoring, and more sophisticated power-saving strategies. Additionally, these scripts need to be developed and tested carefully in a controlled environment before applying them to a production cluster.
 
-# SOLUTIONs
+## SOLUTIONs
 
 Adaptive power management in HPC clusters involves using various tools and techniques to optimize power consumption while maintaining performance. Here are some tools commonly used for adaptive power management in HPC clusters:
 
@@ -300,7 +300,7 @@ Custom scripts for adaptive power management in HPC clusters can be designed to 
 When creating custom scripts, ensure that they are thoroughly tested in a controlled environment before deploying them to a production cluster. Also, consider implementing error handling, logging, and security measures to ensure the scripts function reliably and securely. Custom scripts should be periodically reviewed and updated to adapt to changing cluster requirements and technologies.
 
 
-# PAID SOLUTIONS
+## PAID SOLUTIONS
 
 WORKLOAD-AWARE POWER MANAGEMENT
 Moab® HPC Suite’s workload awareness enables it to provide a unique and innovative solution to power management. It is estimated that over the life of an HPC system, accrued energy costs are equivalent to the cost of the hardware itself. With HPC systems expanding rapidly, energy control is increasingly necessary to reducing costs, meeting power targets, and minimizing carbon footprint. Through idle system power reclamation and per-application power optimization, Moab offers the tools necessary for organizations to identify, create, and implement the optimal power savings solutions to meet their power management objectives.
@@ -314,7 +314,7 @@ Eliminate excess power consumption
 Decrease carbon footprint
 Maintain system responsiveness
 
-# OPEN RESERACH PROBLEM 
+## OPEN RESERACH PROBLEM 
 
 
 Toward Building a Digital Twin of Job Scheduling and Power Management on an HPC System by Ohmura et al. 2023
