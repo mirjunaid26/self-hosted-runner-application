@@ -58,8 +58,6 @@ log "Archival process completed."
 ```
 
 
-Consider incorporating error handling, logging, and other necessary security measures based on your organization's policies and requirements.
-
 
 To automate the archiving process using GitHub Actions, you can set up a workflow that triggers on certain events, such as pushing to a specific branch, and then uses a self-hosted runner to execute the archiving script. Here's a high-level overview of the process:
 
