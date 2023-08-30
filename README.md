@@ -131,7 +131,9 @@ Make sure to thoroughly test your workflow and archiving script to ensure they w
 # Problem 3
 
 SLURM Power Saving Tools
+# slurm.conf file
 ```
+#!/bin/bash
 # Excerpt of slurm.conf
 SelectType=select/cons_res
 SelectTypeParameters=CR_CORE_Memory
