@@ -1,7 +1,6 @@
 ### HPC Engineers Toolkit
 
 # Problem 2
-Given the complexity of archiving large microscope datasets and your specific requirements, here's a suggested strategy and an outline of a Bash script to prepare and archive the data to tape. This approach focuses on creating an organized, versioned, and efficient archiving process:
 
 **Strategy: Efficient and Versioned Archiving**
 
@@ -58,9 +57,9 @@ rm "$ARCHIVE_NAME"
 log "Archival process completed."
 ```
 
-Remember to customize the script by replacing `/path/to/soma_fs` and `/path/to/tape/mount` with your actual source and destination paths. Also, implement the checksum verification mechanism based on your needs.
+Replace `/path/to/soma_fs` and `/path/to/tape/mount` with your actual source and destination paths.
 
-This script is a basic outline and should be thoroughly tested in a controlled environment before using it for critical archiving operations. Additionally, consider incorporating error handling, logging, and other necessary security measures based on your organization's policies and requirements.
+Consider incorporating error handling, logging, and other necessary security measures based on your organization's policies and requirements.
 
 
 To automate the archiving process using GitHub Actions, you can set up a workflow that triggers on certain events, such as pushing to a specific branch, and then uses a self-hosted runner to execute the archiving script. Here's a high-level overview of the process:
@@ -124,8 +123,6 @@ jobs:
 ```
 
 In this example, replace placeholders like `archiving_script.sh`, `archive_log_*.log`, and others with actual values corresponding to your setup.
-
-Make sure to thoroughly test your workflow and archiving script to ensure they work as expected. Also, consider setting up additional steps, such as sending notifications on completion or handling potential failures.
 
 
 # Problem 3
