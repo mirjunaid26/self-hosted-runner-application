@@ -57,7 +57,6 @@ rm "$ARCHIVE_NAME"
 log "Archival process completed."
 ```
 
-Replace `/path/to/soma_fs` and `/path/to/tape/mount` with your actual source and destination paths.
 
 Consider incorporating error handling, logging, and other necessary security measures based on your organization's policies and requirements.
 
