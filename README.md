@@ -131,7 +131,7 @@ Make sure to thoroughly test your workflow and archiving script to ensure they w
 # Problem 3
 
 SLURM Power Saving Tools
-
+```
 # Excerpt of slurm.conf
 SelectType=select/cons_res
 SelectTypeParameters=CR_CORE_Memory
@@ -147,9 +147,10 @@ NodeName=tux[0-127] Weight=1 Feature=local State=UNKNOWN
 NodeName=ec[0-127]  Weight=8 Feature=cloud State=CLOUD
 PartitionName=debug MaxTime=1:00:00 Nodes=tux[0-32] Default=yes
 PartitionName=batch MaxTime=8:00:00 Nodes=tux[0-127],ec[0-127] Default=no
+```
 
 # SuspendProgram and ResumeProgram
-
+```
 #!/bin/bash
 # Example SuspendProgram
 echo "`date` Suspend invoked $0 $*" >>/var/log/power_save.log
@@ -167,7 +168,7 @@ for host in $hosts
 do
    sudo node_startup $host
 done
-
+```
 
 Creating a complete and effective Bash script for configuring an HPC cluster's power-saving measures using SLURM involves multiple complex steps that require thorough understanding of both SLURM and the cluster's hardware. However, I can provide you with a simplified example of a Bash script that demonstrates the concept of adjusting SLURM settings for power savings during low utilization periods.
 
