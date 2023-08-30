@@ -127,10 +127,7 @@ In this example, replace placeholders like `archiving_script.sh`, `archive_log_*
 
 ## Problem 3
 
-### SLURM Power Saving Tools
-
-# SLURM Power Saving
-## Example Scripts
+### SLURM Power Saving
 
 The files in this repository will give you examples of what is need to get SLURM's Power Saving feature working.
 
