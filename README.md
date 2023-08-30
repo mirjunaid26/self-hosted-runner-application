@@ -293,72 +293,14 @@ Adaptive power management in HPC clusters involves using various tools and techn
 
 
 
-### OTHER SOLUTIONS
-
-1. **Dynamic Node Scaling Script:**
-   - Monitor cluster utilization using SLURM job queue data or monitoring tools.
-   - Automatically adjust the number of active nodes based on the current workload.
-   - Use SLURM commands to scale down nodes during low utilization periods and scale up during high utilization.
-
-2. **Energy-Efficient Job Scheduling Script:**
-   - Analyze job queue data to identify energy-efficient job scheduling opportunities.
-   - Prioritize or queue low-priority jobs during off-peak hours to consolidate tasks and reduce the number of active nodes.
-
-3. **Predictive Scheduling Script:**
-   - Analyze historical job scheduling patterns to predict upcoming low-usage periods.
-   - Automatically adjust the power modes of nodes or schedule jobs accordingly.
-
-4. **Thermal Management Script:**
-   - Monitor the temperature of nodes using hardware sensors.
-   - Dynamically adjust node power states to prevent overheating while minimizing performance impact.
-
-5. **Resource Consolidation Script:**
-   - Identify nodes with low utilization and consolidate active jobs onto fewer nodes.
-   - Power down underutilized nodes to save energy.
-
-6. **Job Checkpointing and Suspension Script:**
-   - Automatically checkpoint long-running jobs and suspend them during low-usage periods.
-   - Resume jobs when higher utilization is expected.
-
-7. **Adaptive Frequency Scaling Script:**
-   - Monitor CPU load and workload intensity.
-   - Dynamically adjust CPU frequencies to match workload demands, optimizing performance-per-watt.
-
-8. **Energy Reporting and Logging Script:**
-   - Collect and log energy consumption data for individual nodes or the entire cluster.
-   - Generate reports and analytics to track energy-saving improvements over time.
-
-9. **User Notification Script:**
-   - Notify users about scheduled power-saving periods and provide options for scheduling energy-efficient jobs.
-
-10. **Hybrid Energy and Performance Optimization Script:**
-    - Develop a script that optimizes a trade-off between performance and energy savings based on user-defined policies.
-
-11. **Cluster Cooling Optimization Script:**
-    - Integrate with cooling management systems to adjust cooling resources based on workload and temperature conditions.
-
-12. **Emergency Power Management Script:**
-    - Detect power grid stress or supply issues and automatically initiate power-saving measures to prevent overload or system failures.
-
-
 
 ## PAID SOLUTIONS
 
-WORKLOAD-AWARE POWER MANAGEMENT
-Moab® HPC Suite’s workload awareness enables it to provide a unique and innovative solution to power management. It is estimated that over the life of an HPC system, accrued energy costs are equivalent to the cost of the hardware itself. With HPC systems expanding rapidly, energy control is increasingly necessary to reducing costs, meeting power targets, and minimizing carbon footprint. Through idle system power reclamation and per-application power optimization, Moab offers the tools necessary for organizations to identify, create, and implement the optimal power savings solutions to meet their power management objectives.
-
-IDLE SYSTEM POWER RECLAMATION
-Through Moab’s Intelligent Power Management, HPC users can lower the power state of idle nodes in order to reclaim unnecessary energy usage. HPC systems inevitably experience some measure of node idleness, for example, at the start and end of the life of a cluster, during evenings, weekends, and holidays, or any other time when job submissions slow down or halt. Moab® identifies nodes that are not currently executing workloads and takes them offline by lowering their power state to either standby, suspend, hibernate, or off. This will result in significant reductions in excess power usage, especially with large systems.
-
-To maintain fast response times, Moab® utilizes a Green Pool Buffer Policy which helps to mitigate the delay inherent in restarting these offline nodes. The Green Pool is a small number of nodes permitted to remain in an idle state, thereby ensuring that there are always online nodes readily available for new jobs. The Green Pool then powers down or powers up nodes to maintain quick access to idle nodes, but leverages Moab’s predictive power to ensure that the system is always prepared to perform optimally, while still saving energy appropriately.
-
-Eliminate excess power consumption
-Decrease carbon footprint
-Maintain system responsiveness
+Various tools...
 
 ## OPEN RESERACH PROBLEM 
 
 
 Toward Building a Digital Twin of Job Scheduling and Power Management on an HPC System by Ohmura et al. 2023
 
-Abstract: The purpose of this work is to reduce the burden on system administrators by virtually reproducing job scheduling and power management of their target systems and thereby helping them properly configure the system parameters and policies. Specifically, this paper focuses on a real computing system, named Supercomputer AOBA, as an example to discuss the importance of accurately reproducing the behaviors of job scheduling in the simulation. Since AOBA uses some special power saving features that are not supported by any existing job scheduling simulators, we have first implemented a component for a job scheduling simulator to support the special features, and thus to build a“Digital Twin" of AOBA’s job scheduler. By using the Digital Twin with actual operation data, a system administrator can check if the system is efficiently used in terms of computational performance and power efficiency. This paper shows a use case of exploring appropriate scheduling and power saving parameters. In the use case, we found that there are more appropriate parameter configurations, which can reduce the job waiting time by 70% at most and the energy consumption by 1.2% at most when the system is busy. By exploiting such a Digital Twin, therefore, it is demonstrated the feasibility that a system administrator can properly adjust various parameters without disturbing the system operation.
+Abstract: The purpose of this work is to reduce the burden on system administrators by virtually reproducing job scheduling and power management of their target systems and thereby helping them properly configure the system parameters and policies.
