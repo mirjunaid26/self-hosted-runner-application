@@ -219,7 +219,7 @@ do
 done
 ```
 
-#### shutdown.sh
+#### node_shutdown.sh
 
 ```
 #!/bin/bash
@@ -230,6 +230,18 @@ ssh $1 "ethtool -s enp2s0 wol g"
 ssh $1 "shutdown -h now"
 # or IPMI (but note you'd need to retreive the IPMI address, not the interconnect)...
 #ipmitool -H $1 -v -I lanplus -U username -P userpassword chassis power off
+```
+
+#### node_startup.sh
+
+```
+#!/bin/bash
+# If using Wake-On-Lan on RHEL or variants:
+ether-wake $1
+# If using Wake-On-Lan on SUSE
+#
+# If using IPMI:
+#ipmitool -u $username -p $password -I lanplus -h $1 chassis power up
 ```
 
 
