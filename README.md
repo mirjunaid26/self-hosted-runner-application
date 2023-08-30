@@ -244,7 +244,7 @@ ether-wake $1
 #ipmitool -u $username -p $password -I lanplus -h $1 chassis power up
 ```
 
-#### resume.sh
+#### node_resume.sh
 
 ```
 #!/bin/bash
