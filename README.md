@@ -205,7 +205,7 @@ SlurmctldParameters=enable_configless,idle_on_node_suspend
 ReturnToService=2
 ```
 
-#### suspend.sh script
+#### node_suspend.sh 
 
 ```
 #!/bin/bash
@@ -244,6 +244,19 @@ ether-wake $1
 #ipmitool -u $username -p $password -I lanplus -h $1 chassis power up
 ```
 
+#### resume.sh
+
+```
+#!/bin/bash
+# Example ResumeProgram
+echo "`date` Resume invoked $0 $*" >> /var/log/power_save.log
+hosts=`scontrol show hostnames $1`
+for host in $hosts
+do
+   echo "Starting up " $host >> /var/log/power_save.log
+   sudo /opt/system/slurm/etc/node_startup.sh $host &>> /var/log/power_save.log
+done
+```
 
 
 #### slurm.conf file
