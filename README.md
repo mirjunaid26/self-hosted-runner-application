@@ -1,6 +1,6 @@
 # HPC Engineers Toolkit
 
-## Problem 2
+## Data Management in HPC
 
 **Strategy: Efficient and Versioned Archiving**
 
@@ -121,8 +121,6 @@ jobs:
 
 In this example, replace placeholders like `archiving_script.sh`, `archive_log_*.log`, and others with actual values corresponding to your setup.
 
-
-## Problem 3
 
 ### SLURM Power Saving
 
@@ -247,8 +245,7 @@ done
 ```
 
 
-## SOLUTIONs
-
+## Powe Management in HPC Clusters
 Adaptive power management in HPC clusters involves using various tools and techniques to optimize power consumption while maintaining performance. Here are some tools commonly used for adaptive power management in HPC clusters:
 
 1. **SLURM (Simple Linux Utility for Resource Management):**
