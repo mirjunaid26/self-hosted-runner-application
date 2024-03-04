@@ -1,6 +1,6 @@
 # HPC Engineers Toolkit
 
-## Data Management in HPC
+## Data Management in HPC: How to archive large data sets?
 
 **Strategy: Efficient and Versioned Archiving**
 
@@ -57,7 +57,7 @@ rm "$ARCHIVE_NAME"
 log "Archival process completed."
 ```
 
-
+## GitHub Actions/Runners
 
 To automate the archiving process using GitHub Actions, you can set up a workflow that triggers on certain events, such as pushing to a specific branch, and then uses a self-hosted runner to execute the archiving script. Here's a high-level overview of the process:
 
